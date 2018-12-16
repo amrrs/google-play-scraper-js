@@ -5,6 +5,7 @@ const fs            = require('fs');
 const readline      = require('readline');
 const gplay         = require('google-play-scraper');
 
+const REVIEW_PAGES  = 5; //each page of the review approximately gives 40 Reviews
 const PAGES         = 5;
 const SLEEPTIME     = 5000;
 
@@ -95,7 +96,7 @@ async function readAppTsv(_onFinish) {
 
 async function listReviews() {
 
-for(var x = 0; x < 3; x++) {
+for(var x = 0; x < REVIEW_PAGES; ++x) {
 
  
   tsvexists = fs.existsSync(tsvrevpath);

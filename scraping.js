@@ -6,7 +6,9 @@ var appId = "com.flipkart.android";
 
 async function fetchFun() {
 
-  var something = await gplay.reviews({ appId: appId, page: 0, sort:gplay.sort.NEWEST });
+  var page = 0;
+
+  var something = await gplay.reviews({ appId: appId, page: page, sort:gplay.sort.NEWEST });
 
   //console.log(JSON.stringify(something));
 
